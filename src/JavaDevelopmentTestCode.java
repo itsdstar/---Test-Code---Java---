@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class JavaDevelopmentTestCode {
     public static void main(String[] args){
@@ -180,16 +181,16 @@ public class JavaDevelopmentTestCode {
 
 //        normal 2D array
         int[][] Toomarks = new int[3][3];
-//        [0][0] The first [0] means calling the 1D array and the second [0] means which variable i wont to call
+//        [0][0] The first [0] means calling the 1D array and the second [0] means which variable I want to call
         Toomarks[0][0] = 90;
         Toomarks[0][1] = 91;
         Toomarks[0][2] = 92;
-//        [1][0] The first [1] means calling the 2D array and the second [0] means which variable i wont to call
+//        [1][0] The first [1] means calling the 2D array and the second [0] means which variable I want to call
         Toomarks[1][0] = 80;
         Toomarks[1][1] = 81;
         Toomarks[1][2] = 82;
         System.out.print("First Student In Bengali : ");
-//        [0][0] The first [0] means calling the 1D array and the second [0] means which variable i wont to call
+//        [0][0] The first [0] means calling the 1D array and the second [0] means which variable I want to call
         System.out.println(Toomarks[0][0]);
         System.out.print("First Student In English : ");
         System.out.println(Toomarks[0][1]);
@@ -197,7 +198,7 @@ public class JavaDevelopmentTestCode {
         System.out.println(Toomarks[0][2]);
         System.out.print("\n");
         System.out.print("First Student In Bengali : ");
-//        [1][0] The first [1] means calling the 2D array and the second [0] means which variable i wont to call
+//        [1][0] The first [1] means calling the 2D array and the second [0] means which variable I want to call
         System.out.println(Toomarks[1][0]);
         System.out.print("First Student In English : ");
         System.out.println(Toomarks[1][1]);
@@ -208,7 +209,7 @@ public class JavaDevelopmentTestCode {
 //        without any new variable 2D array
         int[][] toomarks = {{90, 91, 92}, {80, 81, 82}};
         System.out.print("First Student In Bengali : ");
-//        [0][0] The first [0] means calling the 1D array and the second [0] means which variable i wont to call
+//        [0][0] The first [0] means calling the 1D array and the second [0] means which variable I want to call
         System.out.println(toomarks[0][0]);
         System.out.print("First Student In English : ");
         System.out.println(toomarks[0][1]);
@@ -216,7 +217,7 @@ public class JavaDevelopmentTestCode {
         System.out.println(toomarks[0][2]);
         System.out.print("\n");
         System.out.print("First Student In Bengali : ");
-//        [1][0] The first [1] means calling the 2D array and the second [0] means which variable i wont to call
+//        [1][0] The first [1] means calling the 2D array and the second [0] means which variable I want to call
         System.out.println(toomarks[1][0]);
         System.out.print("First Student In English : ");
         System.out.println(toomarks[1][1]);
@@ -229,7 +230,7 @@ public class JavaDevelopmentTestCode {
 //        this is how you print double
         System.out.printf("Price : " + String.valueOf(price));
         System.out.print("\n");
-//        this is how you use casting to print duble
+//        this is how you use casting to print double
         double finalprice = price + 18.00;
         System.out.print("Final Price : " + finalprice);
         System.out.print("\n");
@@ -252,7 +253,7 @@ public class JavaDevelopmentTestCode {
         System.out.print("\n");
 
 //        constants
-//        all of the variables are not  constants because i can change them
+//        all the variables are not  constants because i can change them
         int Age = 19;
         System.out.println(Age);
 //        in next year, Age will be 20
@@ -275,6 +276,144 @@ public class JavaDevelopmentTestCode {
         final float Pi = 3.14f;
 //        this gives error because you can't change the value of the variable
 //        Pi = 1.12f;
-        System.out.println(Pi);
+        System.out.println(Pi + "\n");
+
+//        operators
+
+//        + addition
+        int a = 1;
+        int b = 2;
+        int sum = a + b;
+        System.out.println(sum + "\n");
+//        - subtraction
+        int c = 1;
+        int d = 2;
+        int sub = c - d;
+        System.out.println(sub + "\n");
+//        * multiplication
+        int e = 1;
+        int f = 2;
+        int mul = e * f;
+        System.out.println(mul + "\n");
+//        / division
+//        I used double for better accuracy
+        double g = 1;
+        double h = 2;
+        double div = g / h;
+        System.out.println(div + "\n");
+//        % modulus
+//        it gives the remainder of the division
+        int i = 1;
+        int j = 2;
+        int mod = i % j;
+        System.out.println(mod + "\n");
+
+//        ++ increment
+//        this is how pre-increment works
+        int inc = 1;
+        System.out.println(++inc);
+        System.out.println(inc + "\n");
+//        this is how post-increment works
+        int inc2 = 1;
+        System.out.println(inc2++);
+        System.out.println(inc2 + "\n");
+
+//      -- decrement
+//      this is how pre-decrement works
+        int dec = 1;
+        System.out.println(--dec);
+        System.out.println(dec + "\n");
+//      this is how post-decrement works
+        int dec2 = 1;
+        System.out.println(dec2--);
+        System.out.println(dec2 + "\n");
+
+//      == equal to
+        int a1 = 1;
+        int b1 = 1;
+        boolean equal = a1 == b1;
+        System.out.println(equal + "\n");
+
+//      != not equal to
+        int a2 = 1;
+        int b2 = 1;
+        boolean notEqual = a2 != b2;
+        System.out.println(notEqual + "\n");
+
+//      > greater than
+        int a3 = 1;
+        int b3 = 2;
+        boolean greater = a3 > b3;
+        System.out.println(greater + "\n");
+
+//      < less than
+        int a4 = 1;
+        int b4 = 2;
+        boolean less = a4 < b4;
+        System.out.println(less + "\n");
+
+//      >= greater than or equal to
+        int a5 = 1;
+        int b5 = 2;
+        boolean greaterEqual = a5 >= b5;
+        System.out.println(greaterEqual + "\n");
+
+//      <= less than or equal to
+        int a6 = 1;
+        int b6 = 2;
+        boolean lessEqual = a6 <= b6;
+        System.out.println(lessEqual + "\n");
+
+//      && and
+        int a7 = 1;
+        int b7 = 2;
+        boolean and = a7 > b7 && a7 < b7;
+        System.out.println(and + "\n");
+
+//      || or
+        int a8 = 1;
+        int b8 = 2;
+        boolean or = a8 > b8 || a8 < b8;
+        System.out.println(or + "\n");
+
+//      ! not
+        int a9 = 1;
+        int b9 = 2;
+        boolean not = !(a9 < b9);
+        System.out.println(not + "\n");
+
+//        Math class
+//        used for finding maximum values
+        System.out.println(Math.max(5, 6) +"\n");
+//        used for finding minimum values
+        System.out.println(Math.min(5, 6) + "\n");
+//        random
+//        it returns a random number between 0.0 and 1.0
+        System.out.println(Math.random() + "\n");
+//        for integer type big random numbers
+        System.out.println((int)(Math.random()*100) + "\n");
+//        Math.pow(a,b)
+//        a is the base and b is the exponent
+        System.out.println(Math.pow(2, 3) + "\n");
+//        Math.sqrt(a)
+//        a is the number you want to find the square root of
+        System.out.println(Math.sqrt(25) + "\n");
+
+//        Input
+        Scanner NAME0 = new Scanner(System.in);
+//        Output
+        System.out.print("Enter your Name : ");
+        String NAME09 = NAME0.nextLine();
+//        Output
+        System.out.println("My Name Is " + NAME09 + "\n");
+
+//        Input
+        Scanner AGE0 = new Scanner(System.in);
+//        Output
+        System.out.print("Enter your Age : ");
+        int AGE09 = AGE0.nextInt();
+//        Output
+        System.out.println("My Age Is " + AGE09 + "\n");
     }
+
 }
