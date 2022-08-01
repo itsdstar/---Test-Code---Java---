@@ -487,8 +487,35 @@ public class JavaDevelopmentTestCode {
             NUM01 = sc.nextInt();
             System.out.println("You entered " + NUM01);
         } while (NUM01 >= 0);
+        System.out.println("THE END");
+        System.out.print("\n");
 
+//        Break and Continue
+//        Break
+        int II = 0;
+        while (true){
+            System.out.println(II);
+            II++;
+            if (II > 5){
+                break;
+            }
+        }
+        System.out.print("\n");
 
+//        Continue
+        II = 0;
+        while (true){
+            if (II % 2 == 0){
+                II++;
+                continue;
+            }
+            System.out.println(II);
+            II++;
+            if (II > 5){
+                break;
+            }
+        }
+        System.out.print("\n");
 
 //        Math class
 //        used for finding maximum values
@@ -522,8 +549,96 @@ public class JavaDevelopmentTestCode {
         int AGE09 = AGE0.nextInt();
 //        Output
         System.out.print("My Age Is " + AGE09 + "\n");
+        System.out.print("\n");
 
+//        Try - Catch In Exception Handling
+//        This will throw an exception
+//        int [] arr = new int[90, 91, 92];
+//        System.out.println(arr[5]);
+//        This will not throw an exception
+//        try block
+        try{
+            int [] arr = {90, 91, 92};
+            System.out.println(arr[5]);
+        }
+//        catch block
+        catch (Exception exception) {
+//            Do something artery catching the exception
+            System.out.println("Exception caught");
+        }
+        System.out.print("\n");
 
+//        Methods/Functions
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.print("\n");
+
+//        There's an easier way to write this
+        MethodsFunctions();
+
+//        Another example
+        printName("Dipanjan Mitra");
+
+//        Another example
+        printsum();
+
+//         Mini Project
+//        Number guessing game
+
+        int MyNumber = (int)(Math.random()*100);
+        System.out.println("Guess the number between 0 to 100");
+        int GuessNumber = 0;
+        do {
+            System.out.print("Enter your guess (1 - 100) : ");
+            Scanner Guess = new Scanner(System.in);
+            GuessNumber = Guess.nextInt();
+            if (GuessNumber == MyNumber){
+                System.out.println("You guessed the number");
+                break;
+            }
+            else if (GuessNumber > MyNumber){
+                System.out.println("Your guess is too high");
+            }
+            else if (GuessNumber < MyNumber){
+                System.out.println("Your guess is too low");
+            }
+        } while (GuessNumber >= 0);
+
+        System.out.println("\n");
+        System.out.println("Your Number Was : " + MyNumber);
+    }
+
+    public static void MethodsFunctions()
+//    Just by Writing this function once I can use it Infinite times with just a simple call
+    {
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.println("Methods/Functions");
+        System.out.print("\n");
+    }
+
+    public static void printName(String name09)
+//        Methods/Functions
+    {
+        System.out.println("My Name Is " + name09 + "\n");
+    }
+
+    public static void printsum()
+//        Methods/Functions
+    {
+        Scanner A = new Scanner(System.in);
+        System.out.print("Enter the first number : ");
+        int a = A.nextInt();
+        Scanner B = new Scanner(System.in);
+        System.out.print("Enter the second number : ");
+        int b = B.nextInt();
+        System.out.println("Sum Of " + a + " And " + b + " is " + (a + b));
+        System.out.println("\n");
     }
 
 }
