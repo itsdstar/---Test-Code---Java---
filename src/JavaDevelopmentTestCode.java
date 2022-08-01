@@ -328,6 +328,7 @@ public class JavaDevelopmentTestCode {
         System.out.println(dec2--);
         System.out.println(dec2 + "\n");
 
+//        Comparison Operators
 //      == equal to
         int a1 = 1;
         int b1 = 1;
@@ -364,6 +365,7 @@ public class JavaDevelopmentTestCode {
         boolean lessEqual = a6 <= b6;
         System.out.println(lessEqual + "\n");
 
+//        Logical Operators
 //      && and
         int a7 = 1;
         int b7 = 2;
@@ -381,6 +383,112 @@ public class JavaDevelopmentTestCode {
         int b9 = 2;
         boolean not = !(a9 < b9);
         System.out.println(not + "\n");
+
+//        Conditional statement
+        Scanner isSunup = new Scanner(System.in);
+        System.out.println("Is it sunup?");
+        System.out.println("(1 = yes /2 = no)");
+        System.out.print("Enter your choice : ");
+        int sunup = isSunup.nextInt();
+        if (sunup == 1) {
+            System.out.println("Go to the work");
+        } else if (sunup == 0) {
+            System.out.println("Go to bed");
+        } else {
+            System.out.println("Invalid choice");
+        }
+        System.out.print("\n");
+
+        Scanner VOage = new Scanner(System.in);
+        System.out.print("Enter your age : ");
+        int voage = VOage.nextInt();
+        if (voage >= 18 && voage <= 100) {
+            System.out.println("You are eligible to vote");
+        } else if (voage < 18) {
+            System.out.println("You are not eligible to vote");
+        } else {
+            System.out.println("Invalid choice");
+        }
+        System.out.print("\n");
+
+        Scanner Cash = new Scanner(System.in);
+        System.out.print("Enter how much cash you have : ");
+        int cash = Cash.nextInt();
+//        pen = 10 | notebook = 25
+        if (cash >= 10 && cash <= 25) {
+            System.out.println("You can buy a pen");
+        } else if (cash >= 25 && cash < 35) {
+            System.out.println("You can buy a notebook or 2 pens");
+        } else if (cash >= 35) {
+            System.out.println("You can't buy a pen and a notebook");
+        } else if (cash < 10) {
+            System.out.println("You can't buy anything so please get more cash");
+        }
+        System.out.print("\n");
+
+//        Conditional statement SWITCH
+        Scanner Num1 = new Scanner(System.in);
+        System.out.print("Enter the first number : ");
+        int num1 = Num1.nextInt();
+        Scanner Num2 = new Scanner(System.in);
+        System.out.print("Enter the second number : ");
+        int num2 = Num2.nextInt();
+        Scanner SWITCH = new Scanner(System.in);
+        System.out.println("1 = addition | 2 = subtraction | 3 = multiplication | 4 = division");
+        System.out.print("Enter your choice : ");
+        int Switch = SWITCH.nextInt();
+        switch (Switch) {
+            case 1:
+                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+                break;
+            case 2:
+                System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+                break;
+            case 3:
+                System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+                break;
+            case 4:
+                System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+                break;
+            default:
+                System.out.println("Invalid choice");
+                break;
+        }
+        System.out.print("\n");
+
+//        Loops
+//      for loop
+        for (int I = 0; I < 10; I++) {
+            System.out.println(I);
+        }
+        System.out.print("\n");
+
+//      while loop
+        int I = 0;
+        while (I < 10) {
+            System.out.println(I);
+            I++;
+        }
+        System.out.print("\n");
+
+//      do-while loop
+        int i2 = 0;
+        do {
+            System.out.println(i2);
+            i2++;
+        } while (i2 < 10);
+        System.out.print("\n");
+
+//        Loop Experiment
+        Scanner sc = new Scanner(System.in);
+        int NUM01 = 0;
+        do {
+            System.out.print("Enter a number : ");
+            NUM01 = sc.nextInt();
+            System.out.println("You entered " + NUM01);
+        } while (NUM01 >= 0);
+
+
 
 //        Math class
 //        used for finding maximum values
@@ -413,7 +521,9 @@ public class JavaDevelopmentTestCode {
         System.out.print("Enter your Age : ");
         int AGE09 = AGE0.nextInt();
 //        Output
-        System.out.println("My Age Is " + AGE09 + "\n");
+        System.out.print("My Age Is " + AGE09 + "\n");
+
+
     }
 
 }
